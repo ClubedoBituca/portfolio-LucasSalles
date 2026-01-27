@@ -11,7 +11,7 @@ interface SEOProps {
 const SEO = ({ 
   title = "Lucas Salles Granado - Creative Developer & Cultural Producer",
   description = "Desenvolvedor Full Stack e ex-produtor cultural com experiência na gestão de mais de R$ 1 Milhão em recursos captados e liderança de equipes multidisciplinares. Especialista em React, Three.js, Project Management e Cultural Production.",
-  image = "/src/assets/foto_perfil.png",
+  image = "/foto_perfil.png",
   url = "https://lucassalles.dev",
   type = "website"
 }: SEOProps) => {

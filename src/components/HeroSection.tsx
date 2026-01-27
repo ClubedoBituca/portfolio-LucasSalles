@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
 import NodeGraph from "./NodeGraph";
+import AnimatedBackground from "./AnimatedBackground";
 
 const HeroSection = () => {
   return (
@@ -9,79 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Floating circles */}
-        <motion.div
-          animate={{ 
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ 
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-primary/5 blur-xl"
-        />
-        
-        <motion.div
-          animate={{ 
-            x: [0, -80, 0],
-            y: [0, 100, 0],
-            rotate: [0, -180, -360]
-          }}
-          transition={{ 
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-primary/10 blur-lg"
-        />
-        
-        <motion.div
-          animate={{ 
-            x: [0, 60, 0],
-            y: [0, -80, 0],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ 
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute bottom-1/4 left-1/3 w-16 h-16 rounded-full bg-primary/8 blur-md"
-        />
-        
-        {/* Floating geometric shapes */}
-        <motion.div
-          animate={{ 
-            rotate: [0, 360],
-            x: [0, 50, 0],
-            y: [0, -30, 0]
-          }}
-          transition={{ 
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/3 right-1/3 w-20 h-20 border border-primary/20 rotate-45 blur-sm"
-        />
-        
-        <motion.div
-          animate={{ 
-            rotate: [0, -360],
-            x: [0, -40, 0],
-            y: [0, 60, 0]
-          }}
-          transition={{ 
-            duration: 22,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute bottom-1/3 right-1/4 w-12 h-12 bg-primary/5 rotate-12 blur-sm"
-        />
-      </div>
+      <AnimatedBackground variant="hero" />
       
       {/* Node graph visualization */}
       <div className="absolute inset-0 flex items-center justify-center opacity-30">
@@ -116,12 +45,13 @@ const HeroSection = () => {
               className="relative"
             >
               <img 
-                src="/src/assets/logositeportfolio.png" 
+                src="/logositeportfolio.png" 
                 alt="Lucas Salles Logo" 
                 className="w-32 h-32 md:w-40 md:h-40 object-contain filter drop-shadow-lg"
                 style={{
                   filter: 'brightness(0) saturate(100%) invert(58%) sepia(69%) saturate(2834%) hue-rotate(346deg) brightness(104%) contrast(97%)'
                 }}
+                loading="eager"
               />
               
               {/* Glowing effect behind logo */}
@@ -233,6 +163,8 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
           className="absolute bottom-6 left-1/2 -translate-x-1/2"
+          role="button"
+          aria-label="Scroll down to see more content"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}

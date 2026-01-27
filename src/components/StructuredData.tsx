@@ -37,7 +37,7 @@ const StructuredData = ({
     "https://www.linkedin.com/in/lucas-salles-granado-36a195334/",
     "https://github.com/ClubedoBitucado"
   ],
-  image = "/src/assets/foto_perfil.png",
+  image = "/foto_perfil.png",
   url = "https://lucassalles.dev",
   email = "d2023006878@unifei.edu.br",
   telephone = "+5535991900528"

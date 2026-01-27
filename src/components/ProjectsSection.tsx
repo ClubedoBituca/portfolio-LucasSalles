@@ -5,6 +5,7 @@ import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import { Project } from "@/types/project";
+import AnimatedBackground from "./AnimatedBackground";
 import automationImg from "@/assets/project-automation.jpg";
 import mtgImg from "@/assets/mtgdeckbuilder.jpg";
 import minuciasImg from "@/assets/minuciasportfolio.jpg";
@@ -196,48 +197,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="section-padding relative overflow-hidden" ref={ref}>
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ 
-            x: [0, 100, 0],
-            y: [0, -60, 0],
-            rotate: [0, 90, 0]
-          }}
-          transition={{ 
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-10 right-10 w-24 h-24 border-2 border-primary/10 rounded-lg rotate-45"
-        />
-        
-        <motion.div
-          animate={{ 
-            x: [0, -50, 0],
-            y: [0, 80, 0],
-            scale: [1, 1.3, 1]
-          }}
-          transition={{ 
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute bottom-20 left-10 w-16 h-16 bg-primary/5 rounded-full blur-lg"
-        />
-        
-        <motion.div
-          animate={{ 
-            rotate: [0, 360],
-            x: [0, 30, 0]
-          }}
-          transition={{ 
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/2 left-1/4 w-8 h-8 border border-primary/15 rotate-12"
-        />
-      </div>
+      <AnimatedBackground variant="projects" />
       
       <div className="container-custom relative z-10">
         {/* Header */}

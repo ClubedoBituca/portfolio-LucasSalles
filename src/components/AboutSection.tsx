@@ -2,15 +2,16 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, BarChart3, FolderKanban, Users, Lightbulb, Zap, Target, MessageCircle } from "lucide-react";
+import AnimatedBackground from "./AnimatedBackground";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    { icon: Code2, label: "Dev Web", description: "React, TypeScript, Next.js" },
-    { icon: BarChart3, label: "Data Analysis", description: "SQL, Power BI, Python" },
-    { icon: FolderKanban, label: "Management", description: "Scrum, Kanban, Git" },
+    { icon: Code2, label: "Dev Web", description: "React, TypeScript, Vite" },
+    { icon: BarChart3, label: "Análise de Dados", description: "SQL, Power BI, Python" },
+    { icon: FolderKanban, label: "Gestão", description: "Scrum, Kanban, Git" },
   ];
 
 const softSkills = [
@@ -25,48 +26,7 @@ const softSkills = [
   return (
     <section id="about" className="section-padding bg-card relative overflow-hidden" ref={ref}>
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ 
-            x: [0, -70, 0],
-            y: [0, 50, 0],
-            rotate: [0, 180, 360]
-          }}
-          transition={{ 
-            duration: 28,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/4 right-1/4 w-20 h-20 rounded-full bg-primary/8 blur-xl"
-        />
-        
-        <motion.div
-          animate={{ 
-            x: [0, 40, 0],
-            y: [0, -40, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ 
-            duration: 16,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute bottom-1/3 right-1/3 w-12 h-12 border border-primary/20 rotate-45 blur-sm"
-        />
-        
-        <motion.div
-          animate={{ 
-            rotate: [0, -360],
-            x: [0, 20, 0]
-          }}
-          transition={{ 
-            duration: 24,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/3 left-1/4 w-6 h-6 bg-primary/10 rotate-12"
-        />
-      </div>
+      <AnimatedBackground variant="about" />
       
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -85,9 +45,10 @@ const softSkills = [
               {/* Profile photo */}
               <div className="relative z-10 aspect-square rounded-3xl overflow-hidden">
                 <img 
-                  src="/src/assets/foto_perfil.png" 
-                  alt="Profile" 
+                  src="/foto_perfil.png" 
+                  alt="Lucas Salles Granado - Creative Developer & Cultural Producer" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
 
