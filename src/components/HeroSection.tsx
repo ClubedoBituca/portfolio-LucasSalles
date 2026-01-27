@@ -123,9 +123,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 md:mb-10 px-4"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 md:mb-10 px-2 sm:px-4 text-center"
           >
-            <span className="text-gradient whitespace-nowrap">Data-driven. Creatively informed.</span>
+            <div className="text-gradient">
+              Data-driven.<br className="sm:hidden" />
+              <span className="hidden sm:inline"> </span>
+              Creatively informed.
+            </div>
           </motion.h1>
 
           {/* Subtitle */}

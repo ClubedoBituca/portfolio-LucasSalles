@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Github, Lightbulb, Rocket, ChevronLeft, ChevronRight } from "lucide-react";
 import { Project } from "@/types/project";
@@ -12,11 +12,24 @@ interface ProjectModalProps {
 
 const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (project) {
       document.body.style.overflow = "hidden";
       setCurrentMediaIndex(0);
+      
+      // Focus the modal for better accessibility and ensure it's in view
+      setTimeout(() => {
+        if (modalRef.current) {
+          modalRef.current.focus();
+          modalRef.current.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'center'
+          });
+        }
+      }, 100);
     } else {
       document.body.style.overflow = "unset";
     }
@@ -50,16 +63,18 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md"
+          className="project-modal-overlay bg-background/80 backdrop-blur-md"
           onClick={onClose}
         >
           <motion.div
+            ref={modalRef}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-card rounded-2xl border border-border shadow-2xl scrollbar-thin"
+            className="project-modal-content bg-card rounded-2xl border border-border shadow-2xl scrollbar-thin"
             onClick={(e) => e.stopPropagation()}
+            tabIndex={-1}
           >
             {/* Close button */}
             <button

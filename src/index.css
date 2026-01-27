@@ -505,3 +505,34 @@
     background-color: hsl(var(--card) / 0.95) !important;
     border: 1px solid hsl(var(--border) / 0.3);
   }
+  /* Project Modal Positioning */
+  .project-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .project-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 80rem;
+    max-height: 90vh;
+    margin: auto;
+    overflow-y: auto;
+  }
+
+  /* Ensure modal is always visible */
+  @media (max-height: 600px) {
+    .project-modal-content {
+      max-height: 95vh;
+      margin: 0.5rem auto;
+    }
+  }
