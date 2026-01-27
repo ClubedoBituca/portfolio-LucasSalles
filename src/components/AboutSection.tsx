@@ -9,9 +9,9 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    { icon: Code2, label: "Dev Web", description: "React, TypeScript, Vite" },
-    { icon: BarChart3, label: "Análise de Dados", description: "SQL, Power BI, Python" },
-    { icon: FolderKanban, label: "Gestão", description: "Scrum, Kanban, Git" },
+    { icon: Code2, label: "Web Dev", description: "React, TypeScript, Vite" },
+    { icon: BarChart3, label: "Data Analysis", description: "SQL, Power BI, Python" },
+    { icon: FolderKanban, label: "Management", description: "Scrum, Kanban, Git" },
   ];
 
 const softSkills = [

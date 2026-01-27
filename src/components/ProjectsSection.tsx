@@ -178,10 +178,10 @@ const projects: Project[] = [
 ];
 
 const categories = [
-  { id: "all", label: "Todos" },
-  { id: "web", label: "Dev Web" },
-  { id: "data", label: "Análise de Dados" },
-  { id: "management", label: "Gestão de Projetos" },
+  { id: "all", label: "All" },
+  { id: "web", label: "Web Dev" },
+  { id: "data", label: "Data Analisys" },
+  { id: "management", label: "Project Management" },
 ];
 
 const ProjectsSection = () => {
@@ -209,10 +209,10 @@ const ProjectsSection = () => {
         >
           <span className="text-sm font-mono text-primary mb-4 block">// projects</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary">
-            Cases Selecionados
+            Selected Cases
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Uma seleção de projetos que demonstram minha jornada entre dados, tecnologia e gestão.
+            A selection of projects that showcase my journey across data, technology, and management.
           </p>
         </motion.div>
 

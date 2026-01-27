@@ -8,9 +8,9 @@ interface ProjectCardProps {
 }
 
 const categoryConfig = {
-  web: { icon: Code2, label: "Dev Web", color: "text-primary" },
-  data: { icon: BarChart3, label: "Análise de Dados", color: "text-primary" },
-  management: { icon: FolderKanban, label: "Gestão", color: "text-primary" },
+  web: { icon: Code2, label: "Web Dev", color: "text-blue-500" },
+  data: { icon: BarChart3, label: "Data Analysis", color: "text-green-500" },
+  management: { icon: FolderKanban, label: "Management", color: "text-purple-500" },
 };
 
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
@@ -46,7 +46,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
         
         {/* Category badge */}
         <div className="absolute top-4 left-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-xs font-mono">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-xs font-mono text-primary">
             <CategoryIcon className={`w-3.5 h-3.5 ${category.color}`} />
             {category.label}
           </span>

@@ -64,9 +64,9 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             {/* Close button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-secondary transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-primary-foreground transition-colors"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 text-primary hover:text-primary-foreground" />
             </button>
 
             {/* Media Gallery */}
