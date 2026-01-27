@@ -47,10 +47,27 @@ const SEO = ({
       {/* Additional SEO */}
       <meta name="theme-color" content="#f97316" />
       <link rel="canonical" href={url} />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* DNS prefetch for external resources */}
+      <link rel="dns-prefetch" href="https://formspree.io" />
+      <link rel="dns-prefetch" href="https://github.com" />
+      <link rel="dns-prefetch" href="https://linkedin.com" />
       
       {/* Structured Data for GEO */}
       <meta name="generator" content="React + Vite + TypeScript" />
       <meta name="application-name" content="Lucas Salles Portfolio" />
+      
+      {/* Security headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
   );
 };

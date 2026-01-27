@@ -10,7 +10,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="py-12 border-t border-border bg-card">
+    <footer className="py-8 border-t border-border bg-card">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo/Name */}
@@ -23,7 +23,7 @@ const Footer = () => {
           >
             <p className="font-mono text-lg text-gradient font-semibold">Lucas Salles Granado</p>
             <p className="text-sm text-muted-foreground mt-1">
-              Send me a message! 
+              thanks for your interest!
             </p>
           </motion.div>
 

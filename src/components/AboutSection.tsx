@@ -49,6 +49,9 @@ const softSkills = [
                   alt="Lucas Salles Granado - Creative Developer & Cultural Producer" 
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="400"
                 />
               </div>
 
@@ -84,14 +87,15 @@ const softSkills = [
             
             <div className="space-y-4 text-muted-foreground mb-8">
               <p>
-                My journey began in <strong className="text-foreground">Cultural Production</strong>, 
-                where I developed essential project management skills, team leadership, 
-                and creative thinking under pressure.
+                I began my professional career in <strong className="text-foreground">Cultural Production</strong>, 
+                where I developed strong capabilities in project coordination, stakeholder communication, 
+                and delivering results in fast-paced, high-pressure environments.
               </p>
               <p>
-                Today, as an <strong className="text-foreground">Information Systems</strong>, 
-                student, I combine this background with the technical rigor of data development and analysis.
-                 I believe that the best solutions are born at the intersection of creativity and technology.
+                Currently pursuing a degree in <strong className="text-foreground">Information Systems</strong>, 
+                I apply this foundation to software development and data-driven problem solving. 
+                My work focuses on building well-structured, scalable solutions that align technical execution 
+                with real business and user needs.
               </p>
             </div>
 

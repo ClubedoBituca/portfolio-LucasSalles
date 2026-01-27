@@ -108,7 +108,41 @@ const StructuredData = ({
     "memberOf": {
       "@type": "EducationalOrganization",
       "name": "UNIFEI - Universidade Federal de Itajubá"
-    }
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Sistemas de Informação",
+        "credentialCategory": "degree",
+        "educationalLevel": "Bachelor"
+      }
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Desenvolvimento Web Full Stack",
+          "description": "Desenvolvimento de aplicações web modernas com React, TypeScript e Node.js"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Análise de Dados",
+          "description": "Análise e visualização de dados com Python, SQL e Power BI"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gestão de Projetos Culturais",
+          "description": "Consultoria em gestão de projetos culturais e captação de recursos"
+        }
+      }
+    ]
   };
 
   const websiteSchema = {

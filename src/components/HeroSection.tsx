@@ -48,10 +48,13 @@ const HeroSection = () => {
                 src="/logositeportfolio.png" 
                 alt="Lucas Salles Logo" 
                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain filter drop-shadow-lg"
+                loading="eager"
+                decoding="async"
+                width="160"
+                height="160"
                 style={{
                   filter: 'brightness(0) saturate(100%) invert(58%) sepia(69%) saturate(2834%) hue-rotate(346deg) brightness(104%) contrast(97%)'
                 }}
-                loading="eager"
               />
               
               {/* Glowing effect behind logo */}
@@ -115,17 +118,6 @@ const HeroSection = () => {
             />
           </motion.div>
 
-          {/* Tag */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-accent text-accent-foreground text-sm sm:text-base font-mono mb-8 sm:mb-12"
-          >
-            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span>Creative Technologist</span>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -133,7 +125,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 md:mb-10 px-4"
           >
-            <span className="text-gradient whitespace-nowrap">Data-Driven, Creatively Led.</span>
+            <span className="text-gradient whitespace-nowrap">Data-driven. Creatively informed.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -143,7 +135,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl sm:max-w-3xl mx-auto mb-12 sm:mb-16 px-4"
           >
-          Information Systems student rooted in Cultural Production. Turning ideas into meaningful digital experiences.
+          Bridging technical execution and creative strategy to deliver meaningful digital experiences.
           </motion.p>
 
           {/* CTAs */}

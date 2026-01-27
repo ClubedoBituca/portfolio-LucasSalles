@@ -12,3 +12,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://lucassalles-portfolio.vercel.app/sitemap.xml
+
+# Block access to source maps and config files
+Disallow: /*.map$
+Disallow: /config/
+Disallow: /.env
