@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# Personal Portfolio | Creative Developer & Cultural Producer
 
-## Project info
+Welcome to my personal portfolio repository. This project showcases my journey bridging the gap between **Cultural Production** and **Technology**, featuring projects in Web Development, Machine Learning, and Project Management.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The application is built as a **Single Page Application (SPA)** using React and Vite, optimized for performance, SEO, and Generative Engine Optimization (GEO).
 
-## How can I edit this code?
+## 🚀 Technologies
 
-There are several ways of editing your application.
+This project is built with a modern tech stack focused on performance and developer experience:
 
-**Use Lovable**
+- **Core:** [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/) (Migrated from Next.js)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [shadcn/ui](https://ui.shadcn.com/)
+- **3D/Graphics:** [Three.js](https://threejs.org/) / WebGL
+- **SEO & Head Management:** [react-helmet-async](https://github.com/staylor/react-helmet-async)
+- **Data Structure:** JSON-LD for GEO (Generative Engine Optimization)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+To run this project locally, follow these steps:
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js installed (version 18+ recommended)
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+1.  **Clone the repository:**
+    ```bash
+    git clone <YOUR_GIT_URL>
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  **Navigate to the project directory:**
+    ```bash
+    cd <YOUR_PROJECT_DIRECTORY>
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:8080` (or the port shown in your terminal).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📦 Building for Production
 
-**Edit a file directly in GitHub**
+To create a production-ready build:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+npm run build
