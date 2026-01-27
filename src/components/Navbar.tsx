@@ -16,8 +16,8 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Sobre", href: "#about" },
-    { label: "Projetos", href: "#projects" },
+    { label: "about me", href: "#about" },
+    { label: "projects", href: "#projects" },
   ];
 
   const scrollTo = (href: string) => {
@@ -49,7 +49,7 @@ const Navbar = () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
-              CT
+              Lucas Salles Granado
             </a>
 
             {/* Desktop Nav */}
@@ -68,7 +68,7 @@ const Navbar = () => {
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
                 onClick={() => scrollTo("#contact")}
               >
-                Contato
+                contact
               </Button>
             </div>
 

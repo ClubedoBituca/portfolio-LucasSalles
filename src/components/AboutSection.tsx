@@ -1,27 +1,74 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, BarChart3, FolderKanban, Users, Lightbulb, Zap } from "lucide-react";
+import { Code2, BarChart3, FolderKanban, Users, Lightbulb, Zap, Target, MessageCircle } from "lucide-react";
 
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    { icon: Code2, label: "Dev Web", description: "React, TypeScript, Python" },
-    { icon: BarChart3, label: "Análise de Dados", description: "SQL, Power BI, Python" },
-    { icon: FolderKanban, label: "Gestão", description: "Scrum, Kanban, Metodologias Ágeis" },
+    { icon: Code2, label: "Dev Web", description: "React, TypeScript, Next.js" },
+    { icon: BarChart3, label: "Data Analysis", description: "SQL, Power BI, Python" },
+    { icon: FolderKanban, label: "Management", description: "Scrum, Kanban, Git" },
   ];
 
-  const softSkills = [
-    { icon: Users, label: "Liderança de Equipes" },
-    { icon: Lightbulb, label: "Pensamento Criativo" },
-    { icon: Zap, label: "Resolução de Problemas" },
-  ];
+const softSkills = [
+    { icon: Users, label: "Team Leadership" },         // Liderança de Equipes
+    { icon: Lightbulb, label: "Creative Thinking" },   // Pensamento Criativo
+    { icon: Zap, label: "Problem Solving" },           // Resolução de Problemas
+    { icon: BarChart3, label: "Data Storytelling" },    // Narrativa de Dados
+    { icon: Target, label: "Strategic Vision" },       // Visão Estratégica
+    { icon: MessageCircle, label: "Effective Communication" } // Comunicação Eficaz
+];
 
   return (
-    <section id="about" className="section-padding bg-card" ref={ref}>
-      <div className="container-custom">
+    <section id="about" className="section-padding bg-card relative overflow-hidden" ref={ref}>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          animate={{ 
+            x: [0, -70, 0],
+            y: [0, 50, 0],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 28,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/4 right-1/4 w-20 h-20 rounded-full bg-primary/8 blur-xl"
+        />
+        
+        <motion.div
+          animate={{ 
+            x: [0, 40, 0],
+            y: [0, -40, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 16,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-1/3 right-1/3 w-12 h-12 border border-primary/20 rotate-45 blur-sm"
+        />
+        
+        <motion.div
+          animate={{ 
+            rotate: [0, -360],
+            x: [0, 20, 0]
+          }}
+          transition={{ 
+            duration: 24,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/3 left-1/4 w-6 h-6 bg-primary/10 rotate-12"
+        />
+      </div>
+      
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image/Visual side */}
           <motion.div
@@ -32,12 +79,16 @@ const AboutSection = () => {
           >
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0">
               {/* Abstract background shape */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 transform rotate-3" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tl from-primary/20 to-transparent transform rotate-3" />
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tl from-primary/10 to-transparent transform -rotate-3" />
               
-              {/* Profile placeholder with initials */}
-              <div className="relative z-10 aspect-square rounded-3xl bg-secondary flex items-center justify-center overflow-hidden">
-                <span className="text-8xl font-bold text-gradient">CT</span>
+              {/* Profile photo */}
+              <div className="relative z-10 aspect-square rounded-3xl overflow-hidden">
+                <img 
+                  src="/src/assets/foto_perfil.png" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating badges */}
@@ -65,21 +116,21 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-sm font-mono text-primary mb-4 block">// sobre mim</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Da Cultura para o Código
+            <span className="text-sm font-mono text-primary mb-4 block">// about me</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
+              From Culture to Code
             </h2>
             
             <div className="space-y-4 text-muted-foreground mb-8">
               <p>
-                Minha jornada começou na <strong className="text-foreground">Produção Cultural</strong>, 
-                onde desenvolvi habilidades essenciais de gestão de projetos, 
-                liderança de equipes e pensamento criativo sob pressão.
+                My journey began in <strong className="text-foreground">Cultural Production</strong>, 
+                where I developed essential project management skills, team leadership, 
+                and creative thinking under pressure.
               </p>
               <p>
-                Hoje, como estudante de <strong className="text-foreground">Sistemas de Informação</strong>, 
-                combino essa bagagem com o rigor técnico do desenvolvimento e análise de dados. 
-                Acredito que as melhores soluções nascem na interseção entre criatividade e tecnologia.
+                Today, as an <strong className="text-foreground">Information Systems</strong>, 
+                student, I combine this background with the technical rigor of data development and analysis.
+                 I believe that the best solutions are born at the intersection of creativity and technology.
               </p>
             </div>
 
@@ -94,7 +145,7 @@ const AboutSection = () => {
                   className="text-center p-4 rounded-xl bg-background border border-border"
                 >
                   <skill.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
-                  <p className="font-medium text-sm">{skill.label}</p>
+                  <p className="font-medium text-primary">{skill.label}</p>
                   <p className="text-xs text-muted-foreground mt-1">{skill.description}</p>
                 </motion.div>
               ))}

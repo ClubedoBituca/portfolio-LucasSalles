@@ -72,16 +72,32 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             {/* Media Gallery */}
             <div className="relative aspect-video bg-secondary">
               <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentMediaIndex}
-                  src={project.media[currentMediaIndex]?.url}
-                  alt={project.media[currentMediaIndex]?.alt || project.title}
-                  className="w-full h-full object-cover"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
+                {project.media[currentMediaIndex]?.type === "video" ? (
+                  <motion.video
+                    key={currentMediaIndex}
+                    src={project.media[currentMediaIndex]?.url}
+                    className="w-full h-full object-cover"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                  />
+                ) : (
+                  <motion.img
+                    key={currentMediaIndex}
+                    src={project.media[currentMediaIndex]?.url}
+                    alt={project.media[currentMediaIndex]?.alt || project.title}
+                    className="w-full h-full object-cover"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
               </AnimatePresence>
 
               {project.media.length > 1 && (
@@ -118,12 +134,12 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2">{project.title}</h2>
+                  <h2 className="text-primary md:text-3xl font-bold mb-2">{project.title}</h2>
                   <p className="text-muted-foreground">{project.shortDescription}</p>
                 </div>
                 <div className="flex gap-2">
                   {project.links?.github && (
-                    <Button variant="outline" size="sm" asChild>
+                    <Button size="sm" asChild>
                       <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
@@ -143,7 +159,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
               {/* Tech Stack */}
               <div>
-                <h3 className="text-sm font-mono text-primary mb-3">// stack tecnológico</h3>
+                <h3 className="text-sm font-mono text-primary mb-3">// technology stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
                     <span key={tech} className="tech-badge">
@@ -156,16 +172,16 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               {/* Challenge & Solution */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="p-4 rounded-xl bg-secondary/50 border border-border">
-                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                  <h3 className="font-semibold mb-2 flex items-center gap-2 text-white">
                     <span className="w-2 h-2 rounded-full bg-destructive" />
-                    O Desafio
+                    Challenge
                   </h3>
                   <p className="text-sm text-muted-foreground">{project.challenge}</p>
                 </div>
                 <div className="p-4 rounded-xl bg-secondary/50 border border-border">
-                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                  <h3 className="font-semibold mb-2 flex items-center gap-2 text-white">
                     <span className="w-2 h-2 rounded-full bg-green-500" />
-                    A Solução
+                    Solution
                   </h3>
                   <p className="text-sm text-muted-foreground">{project.solution}</p>
                 </div>
@@ -173,15 +189,15 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
               {/* Full Description */}
               <div>
-                <h3 className="text-sm font-mono text-primary mb-3">// sobre o projeto</h3>
+                <h3 className="text-sm font-mono text-primary mb-3">// about</h3>
                 <p className="text-muted-foreground leading-relaxed">{project.fullDescription}</p>
               </div>
 
               {/* Insights */}
               <div className="p-6 rounded-xl bg-accent border border-primary/20">
-                <h3 className="font-semibold mb-4 flex items-center gap-2">
+                <h3 className="font-semibold mb-4 flex items-center gap-2 text-white">
                   <Lightbulb className="w-5 h-5 text-primary" />
-                  Diário de Bordo
+                  Insights
                 </h3>
                 <ul className="space-y-3">
                   {project.insights.map((insight, i) => (
@@ -195,9 +211,9 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
               {/* Improvements V2.0 */}
               <div className="p-6 rounded-xl bg-secondary border border-border">
-                <h3 className="font-semibold mb-4 flex items-center gap-2">
+                <h3 className="font-semibold mb-4 flex items-center gap-2 text-white">
                   <Rocket className="w-5 h-5 text-primary" />
-                  Melhorias Futuras (V2.0)
+                  Future Improvements
                 </h3>
                 <ul className="space-y-2">
                   {project.improvements.map((improvement, i) => (

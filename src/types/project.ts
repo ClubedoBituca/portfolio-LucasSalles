@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   category: "web" | "data" | "management";
   thumbnail: string;
+  thumbnailType?: "image" | "video";
   shortDescription: string;
   fullDescription: string;
   challenge: string;

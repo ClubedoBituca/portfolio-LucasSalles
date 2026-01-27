@@ -26,11 +26,22 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
     >
       {/* Thumbnail */}
       <div className="relative aspect-video overflow-hidden bg-secondary">
-        <img
-          src={project.thumbnail}
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+        {project.thumbnailType === "video" ? (
+          <video
+            src={project.thumbnail}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
         
         {/* Category badge */}
@@ -45,7 +56,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       {/* Content */}
       <div className="p-6">
         <div className="flex items-start justify-between gap-4 mb-3">
-          <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+          <h3 className="text-xl font-bold bg-gradient-to-r from-orange-300 to-primary bg-clip-text text-transparent group-hover:from-primary group-hover:to-orange-600 transition-all duration-300">
             {project.title}
           </h3>
           <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
