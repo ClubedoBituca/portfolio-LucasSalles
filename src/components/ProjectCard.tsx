@@ -8,9 +8,9 @@ interface ProjectCardProps {
 }
 
 const categoryConfig = {
-  web: { icon: Code2, label: "Dev Web", color: "text-blue-500" },
-  data: { icon: BarChart3, label: "Análise de Dados", color: "text-green-500" },
-  management: { icon: FolderKanban, label: "Gestão", color: "text-purple-500" },
+  web: { icon: Code2, label: "Dev Web", color: "text-primary" },
+  data: { icon: BarChart3, label: "Análise de Dados", color: "text-primary" },
+  management: { icon: FolderKanban, label: "Gestão", color: "text-primary" },
 };
 
 const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
@@ -56,7 +56,7 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
       {/* Content */}
       <div className="p-6">
         <div className="flex items-start justify-between gap-4 mb-3">
-          <h3 className="text-xl font-bold bg-gradient-to-r from-orange-300 to-primary bg-clip-text text-transparent group-hover:from-primary group-hover:to-orange-600 transition-all duration-300">
+          <h3 className="text-xl font-bold bg-gradient-to-r from-primary/70 to-primary bg-clip-text text-transparent group-hover:from-primary group-hover:to-primary/80 transition-all duration-300">
             {project.title}
           </h3>
           <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />

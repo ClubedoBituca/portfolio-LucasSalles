@@ -13,7 +13,7 @@ const Index = () => {
         title="Lucas Salles Granado - Creative Developer & Cultural Producer"
         description="Desenvolvedor Full Stack e ex-produtor cultural com experiência na gestão de mais de R$ 1 Milhão em recursos captados. Especialista em React, Three.js, TypeScript e gestão de projetos culturais."
         image="/foto_perfil.png"
-        url="https://lucassalles.dev"
+        url="https://lucassalles-portfolio.vercel.app/"
       />
       <StructuredData />
       
