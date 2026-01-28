@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, Music, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/ClubedoBitucado", label: "GitHub" },
+    { icon: Github, href: "https://github.com/ClubedoBituca", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/lucas-salles-granado-36a195334/", label: "LinkedIn" },
     { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=d2023006878@unifei.edu.br", label: "Email" },
     { icon: MessageCircle, href: "https://wa.me/5535991900528?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os", label: "WhatsApp" },
