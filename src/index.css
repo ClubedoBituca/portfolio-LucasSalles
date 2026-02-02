@@ -536,3 +536,45 @@
       margin: 0.5rem auto;
     }
   }
+  /* Power BI iframe responsive styling */
+  .powerbi-iframe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .powerbi-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  /* Ensure Power BI iframe is accessible on mobile */
+  @media (max-width: 768px) {
+    .powerbi-iframe-container {
+      min-height: 300px;
+    }
+  }
+
+  /* Loading state for Power BI iframe */
+  .powerbi-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: hsl(var(--secondary));
+    border-radius: 0.5rem;
+  }
+
+  .powerbi-loading::after {
+    content: "Loading dashboard...";
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+  }

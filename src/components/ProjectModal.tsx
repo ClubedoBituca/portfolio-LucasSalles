@@ -101,6 +101,23 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     muted
                     loop
                   />
+                ) : project.media[currentMediaIndex]?.type === "powerbi" ? (
+                  <motion.div
+                    key={currentMediaIndex}
+                    className="w-full h-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <iframe
+                      title="Power BI Dashboard"
+                      src={project.media[currentMediaIndex]?.iframeUrl}
+                      className="w-full h-full border-0 rounded-lg"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  </motion.div>
                 ) : (
                   <motion.img
                     key={currentMediaIndex}
@@ -166,6 +183,14 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                       <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.links?.dashboard && (
+                    <Button size="sm" asChild>
+                      <a href={project.links.dashboard} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Dashboard
                       </a>
                     </Button>
                   )}

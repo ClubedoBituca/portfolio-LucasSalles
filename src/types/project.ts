@@ -10,9 +10,10 @@ export interface Project {
   solution: string;
   techStack: string[];
   media: {
-    type: "image" | "video";
+    type: "image" | "video" | "powerbi";
     url: string;
     alt?: string;
+    iframeUrl?: string;
   }[];
   insights: string[];
   improvements: string[];
@@ -20,5 +21,6 @@ export interface Project {
     github?: string;
     demo?: string;
     live?: string;
+    dashboard?: string;
   };
 }

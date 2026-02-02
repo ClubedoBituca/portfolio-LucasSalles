@@ -11,6 +11,7 @@ import mtgImg from "@/assets/mtgdeckbuilder.jpg";
 import minuciasImg from "@/assets/minuciasportfolio.jpg";
 import rotaImobiliariaImg from "@/assets/videografos.mp4";
 import culturalImg from "@/assets/protfoliogestaodeprojetosculturais.jpg";
+import powerbiDashboardImg from "@/assets/dashboardpowerbi.jpg";
 
 const projects: Project[] = [
   {
@@ -149,6 +150,38 @@ const projects: Project[] = [
         demo: "https://minucias.github.io/",
         github: "https://github.com/minucias/minucias.github.io",
       },
+  },
+  {
+    id: "6",
+    title: "End-to-End Marketplace Analytics Dashboard",
+    category: "data",
+    thumbnail: powerbiDashboardImg,
+    shortDescription: "A full Power BI analytics solution built end-to-end, transforming raw marketplace data into executive-level insights through Power Query, advanced DAX, and interactive visual storytelling.",
+    fullDescription: "This project represents my first complete, end-to-end data analytics solution using Power BI. Developed as the final outcome of an intensive Power BI training program, the dashboard covers the entire analytics lifecycle — from raw data ingestion to decision-ready insights. Working with a real-world marketplace dataset, I designed a robust data model, applied complex data transformations in Power Query, and built advanced DAX measures to accurately reflect business performance. The result is a highly interactive dashboard that enables stakeholders to analyze revenue, discounts, profitability, and performance trends across multiple business dimensions.",
+    challenge: "To transform a complex and unstructured marketplace dataset into a reliable analytical model capable of supporting strategic decision-making across commercial, financial, and operational perspectives.",
+    solution: "I implemented a structured BI workflow starting with data cleaning, normalization, and enrichment in Power Query. I then designed a star-schema data model optimized for performance and scalability. Using DAX, I created key business measures such as gross revenue, discount impact, year-over-year comparisons, and profit margin. Finally, I built an interactive dashboard with multiple drill-down levels and dynamic filters, enabling deep analysis by brand, category, subcategory, product, region, and time.",
+    techStack: ["Power BI", "Power Query", "DAX", "Data Modeling", "Star Schema", "Business Intelligence", "Data Visualization", "Analytical Thinking"],
+    media: [
+      { 
+        type: "powerbi", 
+        url: powerbiDashboardImg, 
+        alt: "Marketplace Analytics Dashboard in Power BI",
+        iframeUrl: "https://app.powerbi.com/view?r=eyJrIjoiM2E1NTc2NjMtMDExYy00ZTkwLWIzMGYtYWI1MTk2YzZjNTU4IiwidCI6Ijc3MzQzNWU5LWM4NDMtNDVjOS1iYzY0LTUxNzZkMzE3ZTg2MyJ9"
+      },
+    ],
+    insights: [
+      "Learned how to structure an end-to-end BI solution, connecting data engineering, modeling, and visualization into a single analytical product.",
+      "Discovered critical performance drivers such as discount sensitivity and margin behavior across brands and product categories.",
+      "Enabled year-over-year analysis to quickly identify growth trends and underperforming segments.",
+    ],
+    improvements: [
+      "Integrate incremental data refresh and performance optimization techniques for large datasets.",
+      "Publish the dashboard to Power BI Service with row-level security (RLS) for multi-user access.",
+      "Extend the solution with forecasting measures and advanced time intelligence in DAX.",
+    ],
+    links: {
+      dashboard: "https://app.powerbi.com/view?r=eyJrIjoiM2E1NTc2NjMtMDExYy00ZTkwLWIzMGYtYWI1MTk2YzZjNTU4IiwidCI6Ijc3MzQzNWU5LWM4NDMtNDVjOS1iYzY0LTUxNzZkMzE3ZTg2MyJ9",
+    },
   },
   {
     id: "5",
