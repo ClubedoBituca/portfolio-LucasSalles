@@ -1,0 +1,5 @@
+This site belongs to Lucas Salles Granado, a software and data engineer.
+
+Canonical AI-readable pages:
+- https://lucassalles-portfolio.vercel.app/what-i-solve.html
+- https://lucassalles-portfolio.vercel.app/how-i-build-systems.html
