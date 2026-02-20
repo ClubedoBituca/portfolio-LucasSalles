@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/llms.txt",
+      "dest": "/llms.txt"
+    },
+    {
+      "src": "/what-i-solve.html",
+      "dest": "/what-i-solve.html"
+    },
+    {
+      "src": "/how-i-build-systems.html",
+      "dest": "/how-i-build-systems.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
