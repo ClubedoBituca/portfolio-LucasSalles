@@ -12,6 +12,8 @@ import minuciasImg from "@/assets/minuciasportfolio.jpg";
 import rotaImobiliariaImg from "@/assets/videografos.mp4";
 import culturalImg from "@/assets/protfoliogestaodeprojetosculturais.jpg";
 import powerbiDashboardImg from "@/assets/dashboardpowerbi.jpg";
+import medicalShopVideo from "@/assets/fullstackmern.mp4";
+import stockPipelineVideo from "@/assets/datapipeline.mp4";
 
 const projects: Project[] = [
   {
@@ -182,6 +184,76 @@ const projects: Project[] = [
     links: {
       dashboard: "https://app.powerbi.com/view?r=eyJrIjoiM2E1NTc2NjMtMDExYy00ZTkwLWIzMGYtYWI1MTk2YzZjNTU4IiwidCI6Ijc3MzQzNWU5LWM4NDMtNDVjOS1iYzY0LTUxNzZkMzE3ZTg2MyJ9",
     },
+  },
+  {
+    id: "7",
+    title: "Medical Shop — Fullstack MERN E-commerce",
+    category: "web",
+    thumbnail: medicalShopVideo,
+    thumbnailType: "video",
+    shortDescription: "Fullstack e-commerce application built with the MERN stack, featuring JWT authentication, cart management, order creation, and PayPal integration via REST API.",
+    fullDescription: "Medical Shop is a fullstack e-commerce application built with MongoDB, Express, React, and Node.js. The frontend uses React and Redux to manage global state such as user authentication, product catalog, cart, and orders, communicating with the backend through a REST API using Axios. The backend is structured with Express routes, controllers, and middleware, handling business logic, authentication via JWT, and data validation. Data is persisted in MongoDB using Mongoose schemas for users, products, and orders, with references and population to enrich responses. The core user flow covers registration/login, product browsing, cart management, checkout, payment, and order creation.",
+    challenge: "Designing a complete purchase flow with clear separation of concerns between frontend, backend, and database layers, while ensuring secure authentication, consistent state management, and reliable order persistence without relying solely on client-side validation.",
+    solution: "I implemented a client–server architecture with a React/Redux frontend and an Express-based REST API. The backend issues JWTs during authentication and protects sensitive routes with middleware. Orders, users, and products are modeled as separate collections in MongoDB with proper references. The checkout flow integrates PayPal for payments and ensures that cart data, user identity, and order state remain consistent from the frontend to the database.",
+    techStack: ["React", "Redux", "Axios", "React Router", "Tailwind CSS", "Vite", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcrypt", "PayPal SDK"],
+    media: [
+      {
+        type: "video",
+        url: medicalShopVideo,
+        alt: "Medical Shop demo showing login, cart, checkout, and order creation flow"
+      }
+    ],
+    insights: [
+      "Backend validation is mandatory; frontend validation is mainly for user experience",
+      "Redux provides a predictable data flow: action → API → reducer → UI",
+      "JWT combined with Express middleware simplifies authorization across routes",
+      "Using MongoDB references and populate enables richer order and user views"
+    ],
+    improvements: [
+      "Add an admin dashboard for product, order, and inventory management",
+      "Implement PayPal webhooks for payment verification and reconciliation",
+      "Improve observability with structured logging and monitoring",
+      "Add automated tests for backend routes and frontend components"
+    ],
+    links: {
+      github: "https://github.com/ClubedoBituca/Medical-Shop-Professional-Healthcare-E-Commerce-Platform"
+    }
+  },
+  {
+    id: "8",
+    title: "Real-Time Stock Market Data Pipeline",
+    category: "data",
+    thumbnail: stockPipelineVideo,
+    thumbnailType: "video",
+    shortDescription: "End-to-end data pipeline for near real-time stock market data, combining streaming ingestion, data lake storage, analytical warehousing, and business-ready transformations.",
+    fullDescription: "This project implements a modern end-to-end data pipeline for near real-time stock market data. Market events are ingested from an external financial API and published to Kafka, enabling scalable and decoupled streaming ingestion. The raw events are persisted to an S3-compatible data lake using MinIO, ensuring historical storage and reprocessability. Snowflake is used as the analytical data warehouse, where data is organized following the Medallion Architecture (Raw, Cleaned, and Gold layers). Transformations are handled with dbt, applying versioned SQL models to convert raw market data into business-ready analytical tables. The pipeline is orchestrated with Airflow, and the final datasets are consumed in Power BI for visualization and analysis.",
+    challenge: "Designing a reliable and reproducible pipeline that integrates multiple unfamiliar technologies while preserving data correctness, historical traceability, and clear separation between ingestion, storage, transformation, and consumption layers.",
+    solution: "I designed a modular architecture where Kafka handles event streaming, MinIO acts as a durable data lake, and Snowflake provides scalable analytical processing. dbt is used to implement structured transformations and business logic in SQL, producing Gold-level datasets such as daily OHLC candles, latest price snapshots, and volatility metrics. Airflow orchestrates the execution order and dependencies, and Docker is used to containerize the entire infrastructure, ensuring a consistent and reproducible environment.",
+    techStack: ["Kafka", "Zookeeper", "MinIO (S3-compatible storage)", "Snowflake", "dbt", "Airflow", "Docker", "PostgreSQL", "Power BI", "Python", "SQL"],
+    media: [
+      {
+        type: "video",
+        url: stockPipelineVideo,
+        alt: "Architecture walkthrough and demo of the real-time stock market data pipeline"
+      }
+    ],
+    insights: [
+      "Streaming systems shift the mindset from batch tables to event-driven data flows",
+      "Separating state (latest snapshot) from history (candles) simplifies analytics and modeling",
+      "The Medallion Architecture helps enforce clarity between raw data, cleaned data, and business logic",
+      "dbt enables treating SQL transformations with the same rigor as application code",
+      "Dockerized infrastructure makes complex data stacks reproducible and easier to reason about"
+    ],
+    improvements: [
+      "Add incremental dbt models for improved performance and scalability",
+      "Implement data quality tests and freshness checks in dbt",
+      "Introduce rolling-window features for advanced analytics and ML",
+      "Deploy the pipeline to a cloud environment (AWS or GCP)",
+      "Integrate real-time feature serving for downstream ML models"
+    ],
+    links: {
+      github: "https://github.com/ClubedoBituca/Real-Time-Stock-Market-Data-Pipeline"
+    }
   },
   {
     id: "5",

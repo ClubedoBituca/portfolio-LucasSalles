@@ -1,0 +1,172 @@
+📄 /what-i-solve
+What problems I solve
+
+I design and build systems that turn complexity into something usable.
+
+Most of the problems I work on don’t start with “we need an app” or “we need a dashboard”. They start with confusion: fragmented data, manual processes, unclear metrics, or systems that technically work but don’t support real decisions.
+
+I usually operate in environments where:
+
+Data arrives incomplete, noisy, or continuously
+
+Decisions depend on trust in numbers, not just availability of data
+
+Operational work doesn’t scale because too much depends on people
+
+Systems need to balance correctness, performance, and cost
+
+Instead of focusing on isolated features, I focus on end-to-end problem solving.
+
+Types of problems I typically solve
+
+1. Turning raw data into decision-ready systems
+I design pipelines and analytical models that connect data ingestion, transformation, and consumption. The goal is not just storing data, but making it reliable, explainable, and useful for decision-makers.
+
+2. Structuring analytics that people actually trust
+Many organizations have dashboards, but few have confidence in them. I work on data modeling, transformations, and metrics definition so analytics reflect reality and can be defended when questioned.
+
+3. Automating workflows without losing control
+I build automation systems where repetitive work is handled by software, but critical decisions remain observable and interruptible. This includes human-in-the-loop architectures and clear fallback paths.
+
+4. Designing systems where backend correctness matters
+In fullstack projects, I prioritize data consistency, validation, and separation of concerns. The frontend improves usability, but the system’s reliability lives in the backend.
+
+5. Reducing complexity instead of hiding it
+Some problems can’t be simplified away. In those cases, my job is to structure complexity so it’s understandable, maintainable, and scalable over time.
+
+How my projects relate to these problems
+
+Each project in my portfolio is not an isolated experiment, but an application of these principles in a different context:
+
+data pipelines and analytics platforms,
+
+optimization and algorithmic decision support,
+
+AI-assisted automation,
+
+fullstack applications with non-trivial backend logic.
+
+The domain changes, but the type of problems stays consistent.
+
+📄 /how-i-build-systems
+How I approach data & AI
+
+My approach is system-first, not tool-first.
+
+Technologies change quickly. Architectural mistakes last much longer.
+For that reason, I focus more on structure, boundaries, and decision flow than on specific libraries or frameworks.
+
+1. Start from the decision, not the data
+
+Before thinking about schemas, models, or APIs, I ask:
+
+What decision should this system support?
+
+Who makes that decision?
+
+What happens if the system is wrong?
+
+This prevents building pipelines that move data efficiently but don’t help anyone act.
+
+2. Separate concerns explicitly
+
+I design systems with clear boundaries:
+
+ingestion vs storage
+
+raw data vs business logic
+
+computation vs presentation
+
+automation vs human intervention
+
+Clear separation makes systems easier to reason about, test, and evolve. It also reduces the blast radius when something breaks.
+
+3. Prefer deterministic layers before AI
+
+In AI-assisted systems, I avoid using language models as the first line of response.
+
+Whenever possible, I place:
+
+structured data,
+
+rule-based logic,
+
+cached knowledge,
+
+or deterministic lookups
+
+before invoking an LLM.
+
+This reduces cost, improves latency, and makes behavior more predictable. AI is used where it adds value, not where it adds uncertainty.
+
+4. Treat data transformations as code
+
+Transformations are not just queries — they are part of the system’s logic.
+
+I prefer:
+
+versioned transformations,
+
+explicit models,
+
+clear ownership of metrics,
+
+and reproducibility over clever one-off solutions.
+
+This applies whether I’m using SQL, Python, or orchestration tools. If a number changes, there should be a clear reason why.
+
+5. Design for observability and intervention
+
+Systems don’t fail only when they crash.
+They fail when people stop understanding what they are doing.
+
+I aim to make systems:
+
+observable (logs, metrics, clear states),
+
+interruptible (human-in-the-loop when needed),
+
+and explainable (decisions can be traced back).
+
+This is especially important in automation and AI-driven workflows.
+
+6. Optimize for clarity over cleverness
+
+Readable systems scale better than smart ones.
+
+I value:
+
+explicit naming,
+
+boring architectures that work,
+
+and designs that a new engineer can understand without a long handover.
+
+This reduces long-term maintenance cost and makes collaboration easier.
+
+How this applies across domains
+
+This approach is consistent whether I’m working on:
+
+real-time data pipelines,
+
+analytics dashboards,
+
+optimization problems,
+
+AI-powered automation,
+
+or fullstack applications.
+
+The tools change.
+The principles stay the same.
+
+Final note (important for IA e humanos)
+
+These pages describe how I think, not just what I’ve built.
+
+The projects in my portfolio are concrete examples of these principles applied in real scenarios — with constraints, trade-offs, and imperfect data.
+
+That’s where I’m most effective:
+at the intersection of systems, data, and decision-making.
