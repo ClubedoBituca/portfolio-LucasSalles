@@ -14,6 +14,7 @@ import culturalImg from "@/assets/protfoliogestaodeprojetosculturais.jpg";
 import powerbiDashboardImg from "@/assets/dashboardpowerbi.jpg";
 import medicalShopVideo from "@/assets/fullstackmern.mp4";
 import stockPipelineVideo from "@/assets/datapipeline.mp4";
+import bispoImg from "@/assets/capabispo.jpg";
 
 const projects: Project[] = [
   {
@@ -278,6 +279,34 @@ const projects: Project[] = [
       "Apply these management methodologies to future agile software development lifecycles.",
     ],
     links: {
+    },
+  },
+  {
+    id: "9",
+    title: "Bispo do Rosário Tribute — Animated Frontend",
+    category: "web",
+    thumbnail: bispoImg,
+    shortDescription: "A tribute landing page honoring Arthur Bispo do Rosário, focused on Tailwind CSS composition, image transitions, and micro-interactions inspired by textile layers and museum-like storytelling.",
+    fullDescription: "A lightweight, responsive front-end experience built to explore Tailwind CSS best practices and animation patterns. The page features layered image presentation, smooth crossfade transitions (front/back views), hover-driven overlays, and cohesive motion design aligned with the artist's visual language. The implementation prioritizes performance (GPU-friendly transforms/opacity) and accessibility (keyboard interaction and reduced motion support).",
+    challenge: "Create a visually coherent tribute page that communicates the artist's atmosphere while using a modern UI stack and maintaining strong performance and accessibility.",
+    solution: "I built a component-driven layout with a small motion system (consistent durations/easings), crossfade image swapping using opacity transitions, and hover overlays to reveal contextual text. The result is a clean, responsive page with micro-interactions that reinforce the narrative without heavy dependencies.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+    media: [
+      { type: "image", url: bispoImg, alt: "Bispo do Rosário Tribute — Hero section" },
+    ],
+    insights: [
+      "Crossfade transitions using opacity + absolute stacking keep animations smooth and layout-stable.",
+      "Tailwind's utility composition enabled rapid iteration while preserving consistency across sections.",
+      "A small motion system (shared easing/durations) makes the UI feel cohesive and intentional.",
+    ],
+    improvements: [
+      "Add a dedicated gallery section with progressive image loading and captions.",
+      "Introduce a timeline/collection page to contextualize works and themes.",
+      "Add accessibility refinements (focus-visible outlines per component and richer aria labels).",
+    ],
+    links: {
+      github: "https://github.com/ClubedoBituca/homenagembispodorosario",
+      demo: "https://bispodorosario.vercel.app/",
     },
   },
 ];
